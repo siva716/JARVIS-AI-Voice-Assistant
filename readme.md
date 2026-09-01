@@ -1,82 +1,255 @@
-# 🤖 MARK XXXIX-OR (39)
-### The Ultimate Cross-Platform Personal AI Assistant — By FatihMakes
+# 🤖 JARVIS AI Voice Assistant
 
-> 📺 **[Watch the full setup video on YouTube](https://youtu.be/ldvDNzwnM8k)**
+### A Python-Based Intelligent Desktop AI Assistant
 
-A real-time voice AI that can hear, see, understand, and control your computer — on any OS. Supporting Windows, macOS, and Linux. Local execution. Zero subscriptions. Engineered for total autonomy.
+JARVIS is a Python-based AI voice assistant designed to provide natural voice interaction, intelligent responses, computer automation, and task assistance through a modular desktop application.
 
----
-
-## ✨ Overview
-
-MARK XXXIX-OR represents the pinnacle of the Jarvis series, evolving into a more flexible and robust system. It bridges the gap between the operating system and human intent. Through natural dialogue, Mark 39 analyzes your screen, processes uploaded documents, and executes complex workflows with a brand-new, adaptive interface.
-
-It's not just an assistant — it's an extension of your digital life.
+The project combines AI services, voice interaction, system automation, persistent memory, and a graphical user interface into a single personal assistant platform.
 
 ---
 
-## 🚀 Capabilities
+## ✨ Features
 
-### Core Features
-| Feature | Description |
-|---|---|
-| 🎙️ Real-time Voice | Ultra-low latency conversation in any language |
-| 🖥️ System Control | Launch apps, manage files, execute terminal commands |
-| 🧩 Autonomous Tasks | High-level planning for complex, multi-step goals |
-| 👁️ Visual Awareness | Real-time screen processing and webcam vision |
-| 🧠 Persistent Memory | Deeply remembers your projects, preferences, and personal context |
-| ⌨️ Hybrid Input | Seamlessly switch between keyboard typing and voice commands |
-
----
-
-## 🆕 What's New in XXXIX-OR
-
-- 📂 **Advanced File Handling** — New support for direct file uploads. Drop PDFs, source code, or images into the assistant to have them analyzed, summarized, or edited instantly.
-- 🎨 **Adaptive & Flexible UI** — A complete overhaul of the interface. The new UI is fully resizable and responsive, featuring transparency controls and customizable layouts to fit your workspace perfectly.
-- 🐧🍎 **Refined Cross-Platform Stability** — Major fixes for macOS and Linux compatibility. Core system actions are now more consistent across all three major operating systems.
-- ⚡ **Optimized Core Engine** — Significant performance boost in tool-calling logic and response generation, resulting in a 40% faster interaction speed.
-- 🔀 **OpenRouter Integration** — Selected action modules (web search, memory, flight finder, desktop control, and more) now route their LLM calls through OpenRouter's free-tier models. This significantly increases the effective request limit without any additional cost, while Gemini Live continues to handle real-time voice and tool-calling.
+* 🎙️ **Voice Interaction** — Interact with JARVIS using natural voice commands.
+* 🧠 **AI-Powered Responses** — Generate intelligent responses using integrated AI services.
+* 🖥️ **Desktop Automation** — Perform supported computer and system-level actions.
+* 📂 **File & Application Handling** — Work with files and launch supported applications.
+* 🔎 **AI Tool Integration** — Extend JARVIS with modular actions and tools.
+* 💾 **Persistent Memory** — Store and retrieve relevant information across interactions.
+* ⌨️ **Hybrid Interaction** — Support both voice and text-based interaction.
+* 🎨 **Graphical User Interface** — Desktop interface for interacting with the assistant.
+* 🔐 **API Key Protection** — API credentials are kept outside the public repository.
+* 🧩 **Modular Architecture** — Separate modules for agents, actions, memory, configuration, and core functionality.
 
 ---
 
-## ⚡ Quick Start
+## 🛠️ Technology Stack
+
+| Technology       | Purpose                                |
+| ---------------- | -------------------------------------- |
+| Python           | Core application development           |
+| AI / LLM APIs    | Intelligent responses and reasoning    |
+| Voice Processing | Voice input and interaction            |
+| GUI              | Desktop user interface                 |
+| JSON             | Configuration and API settings         |
+| Git & GitHub     | Version control and project management |
+
+---
+
+## 📁 Project Structure
+
+```text
+JARVIS_FINAL_CORRECTED/
+│
+├── actions/                  # System and assistant actions
+├── agent/                    # AI agent and decision-making logic
+├── config/                   # Configuration and API key templates
+├── core/                     # Core assistant functionality
+├── memory/                   # Persistent memory components
+│
+├── face.png                  # Assistant visual asset
+├── main.py                   # Application entry point
+├── ui.py                     # Graphical user interface
+├── or_client.py              # OpenRouter integration
+├── genai_compat.py           # Generative AI compatibility layer
+│
+├── requirements.txt          # Python dependencies
+├── setup.py                  # Package setup
+├── readme.md                 # Project documentation
+│
+├── verify_genai_import.py    # AI module verification
+└── verify_main_import.py     # Main module verification
+```
+
+---
+
+## ⚙️ Requirements
+
+Before running JARVIS, make sure you have:
+
+* Windows / macOS / Linux
+* Python 3.12+
+* Microphone for voice interaction
+* Internet connection for cloud AI services
+* Required API credentials
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/FatihMakes/Mark-XXXIX-OR.git
-cd Mark-XXXIX-OR
+git clone https://github.com/siva716/JARVIS-AI-Voice-Assistant.git
+cd JARVIS-AI-Voice-Assistant
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+### 3. Activate the virtual environment
+
+**Windows PowerShell:**
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+**Windows CMD:**
+
+```cmd
+.venv\Scripts\activate
+```
+
+### 4. Install dependencies
+
+```bash
 pip install -r requirements.txt
-playwright install
+```
+
+---
+
+## 🔐 API Configuration
+
+For security, real API credentials should **never be committed to GitHub**.
+
+A template configuration is provided:
+
+```text
+config/api_keys.example.json
+```
+
+Create your local API configuration:
+
+```text
+config/api_keys.json
+```
+
+Add your required API credentials according to the example configuration.
+
+> ⚠️ Never publish real API keys, passwords, tokens, or other secrets to GitHub.
+
+---
+
+## ▶️ Running JARVIS
+
+After completing the installation and configuration:
+
+```bash
 python main.py
 ```
 
-> ⚠️ **Installation Note:** To keep the repository lightweight, some OS-specific dependencies are not bundled in `requirements.txt`. If you run into a `ModuleNotFoundError`, simply install the missing package via `pip install <module_name>` for your specific system.
+---
+
+## 🧪 Verification
+
+The repository includes verification scripts that can be used to check important modules before running the application.
+
+```bash
+python verify_genai_import.py
+```
+
+```bash
+python verify_main_import.py
+```
 
 ---
 
-## 📋 Requirements
+## 🧠 Architecture
 
-| Requirement | Details |
-|---|---|
-| **OS** | Windows 10/11, macOS, or Linux |
-| **Python** | 3.11 or 3.12 |
-| **Microphone** | Required for voice interaction |
-| **API Keys** | Free Gemini API key + Free OpenRouter API key |
+JARVIS follows a modular architecture:
+
+```text
+                    ┌──────────────────┐
+                    │      User        │
+                    │ Voice / Text     │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │       UI         │
+                    │     ui.py        │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │   Main Engine    │
+                    │     main.py      │
+                    └────────┬─────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              ▼              ▼              ▼
+        ┌──────────┐   ┌──────────┐   ┌──────────┐
+        │  Agent   │   │ Actions  │   │  Memory  │
+        └────┬─────┘   └────┬─────┘   └────┬─────┘
+             │              │              │
+             └──────────────┼──────────────┘
+                            ▼
+                    ┌──────────────────┐
+                    │   AI Services    │
+                    │ Gemini / APIs    │
+                    └──────────────────┘
+```
 
 ---
 
-## ⚠️ License
+## 🔒 Security
 
-Personal and non-commercial use only.
-Licensed under **[Creative Commons BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)**.
+The project uses a `.gitignore` configuration to prevent sensitive and unnecessary files from being committed.
+
+The following types of files are excluded:
+
+```text
+.venv/
+__pycache__/
+*.pyc
+.env
+config/api_keys.json
+```
+
+Never commit:
+
+* API keys
+* Access tokens
+* Passwords
+* Private credentials
+* Personal secrets
 
 ---
 
-## 👤 Connect with the Creator
+## 🚧 Future Improvements
 
-Engineered by a developer building a real-world JARVIS-style assistant.
-⭐ **Star the repository to support the journey to Mark 100.**
+Planned improvements include:
 
-| Platform | Link |
-|---|---|
-| YouTube | [@FatihMakes](https://www.youtube.com/@FatihMakes) |
-| Instagram | [@fatihmakes](https://www.instagram.com/fatihmakes) |
+* Advanced multi-agent task planning
+* More desktop automation capabilities
+* Improved long-term memory
+* Better voice recognition and response latency
+* Additional AI model integrations
+* Enhanced system monitoring
+* Improved cross-platform compatibility
+* More advanced visual interaction
+* Better error handling and logging
+* Containerized deployment and CI/CD support
+
+---
+
+## 👨‍💻 Author
+
+**Sivaneshwaran R**
+
+Computer Science & Engineering
+
+GitHub:
+https://github.com/siva716
+
+---
+
+## ⭐ Project
+
+If you find this project interesting, consider starring the repository and following the development journey.
+
+**JARVIS AI Voice Assistant** — an ongoing project focused on building a practical, modular, AI-powered desktop assistant.
